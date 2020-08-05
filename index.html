@@ -273,6 +273,333 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/08/05/Beautiful库/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Vic Wang">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="欢迎来到王艺辉的小家">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2020/08/05/Beautiful库/" itemprop="url">BetifulSoup库用法</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-08-05T16:41:17+08:00">
+                2020-08-05
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
+                  <a href="/categories/爬虫笔记/" itemprop="url" rel="index">
+                    <span itemprop="name">爬虫笔记</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <blockquote>
+<h2 id="Life-is-short-use-python"><a href="#Life-is-short-use-python" class="headerlink" title="Life is short,use python."></a>Life is short,use python.</h2></blockquote>
+<h1 id="BetifulSoup库"><a href="#BetifulSoup库" class="headerlink" title="BetifulSoup库"></a>BetifulSoup库</h1><hr>
+<ol>
+<li><p>import的通常用法应该是<code>form bs4 import BetifulSoup</code>，注意大小写！！！原来Python还对大小写敏感的……（自觉给P一个大写哈哈哈）</p>
+</li>
+<li><p>基本用法：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> requests</span><br><span class="line"><span class="keyword">from</span> bs4 <span class="keyword">import</span> BeautifulSoup</span><br><span class="line">headers = &#123;</span><br><span class="line"><span class="string">'User-Agent'</span>:<span class="string">'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.132 Safa'</span></span><br><span class="line">        <span class="string">'ri/537.36'</span></span><br><span class="line">&#125;</span><br><span class="line">res = requests.get(<span class="string">'http://www.baidu.com/'</span>,headers=headers)</span><br><span class="line">soup=(BeautifulSoup(res.text,<span class="string">'html.parser'</span>))</span><br><span class="line">print(soup.prettify())</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>这得到的是一个标准缩进的Soup文档，是结构化的数据，为后期过滤数据做准备。</p>
+<ol start="3">
+<li><p>BeautifulSoup库解析器</p>
+<ul>
+<li>Python标准库（<code>BeautifulSoup(markup,&quot;html.parser&quot;)</code>)</li>
+<li>lxml HTML解析器（<code>BeautifulSoup(markup,&quot;lxml&quot;)</code>)</li>
+<li>Lxml XML解析器（<code>BeautifulSoup(markup,[&quot;lxml&quot;,&quot;xml&quot;]),BeautifulSoup(markup,&quot;xml&quot;)</code>)</li>
+<li>html5lib（<code>BeautifulSoup(markup,&quot;html5lib&quot;)</code>）</li>
+</ul>
+<p><strong> 官方推荐使用的是lxml，速度快，文档容错能力强。</strong></p>
+</li>
+<li><p>定位元素的方法</p>
+<ul>
+<li><code>find(tag,attibutes,recursive,text,keywords)</code><br>tag：标签<br>attibutes：属性<br>常用的是这两个</li>
+</ul>
+</li>
+</ol>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/08/05/Requests库/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Vic Wang">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="欢迎来到王艺辉的小家">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2020/08/05/Requests库/" itemprop="url">Requests库用法</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-08-05T16:38:58+08:00">
+                2020-08-05
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
+                  <a href="/categories/爬虫笔记/" itemprop="url" rel="index">
+                    <span itemprop="name">爬虫笔记</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <blockquote>
+<h2 id="Life-is-short-use-python"><a href="#Life-is-short-use-python" class="headerlink" title="Life is short,use python."></a>Life is short,use python.</h2></blockquote>
+<h1 id="Requests库"><a href="#Requests库" class="headerlink" title="Requests库"></a>Requests库</h1><hr>
+<ol>
+<li><p>import没什么特殊的，就直接 <code>import requests</code></p>
+</li>
+<li><p>get（）方法：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> requests</span><br><span class="line">res = requests.get(<span class="string">'http://www.baidu.com/'</span>) </span><br><span class="line">print(res)</span><br><span class="line">print(res.text)</span><br></pre></td></tr></table></figure>
+<p>在pycharm中，pycharm中请求网址成功返回Response [200]，否则就是404，400什么的…<br>返回一个没什么格式的网页源代码（不过我看起来感觉格式挺好的……）</p>
+</li>
+<li><p>请求头<br>在Chrome浏览器中F12，上面选network，刷新一下页面，左下角框name里选第一个，右边往下找就能找到<br>使用方法：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> requests</span><br><span class="line">headers = &#123;</span><br><span class="line"><span class="string">'User-Agent'</span>:<span class="string">'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36      (KHTML, like Gecko) Chrome/80.0.3987.132 Safa'</span></span><br><span class="line"><span class="string">'ri/537.36'</span></span><br><span class="line">		 &#125;</span><br><span class="line">res = requests.get(<span class="string">'http://www.baidu.com/'</span>,headers=headers)</span><br><span class="line">print(res)</span><br><span class="line">print(res.text)</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>然后我惊奇地发现，打印出来的东西好像多了……</p>
+<ol start="4">
+<li>常见异常<br>ConnectionError：网络问题<br>HTTPError：来自Response_for_stasus()，HTTP返回了不成功的状态码，若网也不存在，返回404<br>Timeout：请求超时<br>TooManyRedirects：请求超过了设定的最大次数</li>
+</ol>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/08/01/（三）/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
@@ -1088,7 +1415,7 @@ echo. &amp; pause</code></p>
               
                 <a href="/archives">
               
-                  <span class="site-state-item-count">5</span>
+                  <span class="site-state-item-count">7</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -1099,7 +1426,7 @@ echo. &amp; pause</code></p>
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-count">3</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -1110,7 +1437,7 @@ echo. &amp; pause</code></p>
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">20</span>
+                  <span class="site-state-item-count">27</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
